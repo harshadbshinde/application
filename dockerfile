@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM nginx:alpine
 
 WORKDIR /app
 
@@ -12,6 +12,6 @@ RUN npm run build
 
 RUN npm install -g serve
 
-EXPOSE 3000
+EXPOSE 70
 
 CMD ["serve", "-s", "build", "-l", "3000"]
